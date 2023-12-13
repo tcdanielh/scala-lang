@@ -1,8 +1,8 @@
-title: The Scala Programming Language
+title: The Scenic Programming Language
 
-scalaversion: "2.13.12"
+scenicversion: "3.0.0b2"
 
-url: https://www.scala-lang.org
+url: https://www.scenic-lang.org
 baseurl: ""
 markdown: kramdown
 highlighter:
@@ -10,11 +10,7 @@ highlighter:
 exclude:
   - bundle-vendor/
   - bin/
-  - blog/README.md
-  - training/README.md
   - README.md
-  - news/README.md
-  - events/README.md
   - Gemfile
   - Gemfile.lock
   - vendor
@@ -36,13 +32,9 @@ defaults:
 collections:
   install_tabs:
     output: false
-  why_scala_items:
+  why_scenic_items:
     output: false
-  scala_use_case_items:
-    output: false
-  scala_carousel_items:
-    output: false
-  scala_items:
+  scenic_use_case_items:
     output: false
   online_courses:
     output: false
@@ -51,8 +43,6 @@ collections:
   events:
     output: false
   downloads:
-    output: true
-  posts:
     output: true
 
 # Pagination

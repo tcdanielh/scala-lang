@@ -34,10 +34,10 @@
 }
 
 
-.scala3 .ribbon-version {
+.scenic3 .ribbon-version {
   background: $brand-tertiary-dotty;
 }
-.scala2 .ribbon-version {
+.scenic2 .ribbon-version {
   background: $brand-tertiary;
 }
 
@@ -184,7 +184,7 @@
         }
     }
 
-    .btn-download.scala3 {
+    .btn-download.scenic3 {
         background: $brand-tertiary-dotty;
         &:active,
         &:focus,

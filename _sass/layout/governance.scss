@@ -68,7 +68,7 @@
         cursor: pointer;
     }
 
-    .scala-items-grid {
+    .scenic-items-grid {
 
         .items-menu {
             @include display(grid);
@@ -83,7 +83,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .scala-item {
+            .scenic-item {
                 @include display(flex);
                 @include flex-direction(column);
                 @include justify-content(space-between);

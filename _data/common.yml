@@ -1,10 +1,3 @@
-# SNS URLs
-githubUrl: https://github.com/scala/scala
-twitterUrl: https://twitter.com/scala_lang
-scaladexUrl: https://scaladex.scala-lang.org
-scastieUrl: https://scastie.scala-lang.org
-courseraMoocsUrl: https://www.coursera.org/specializations/scala
-
 texts:
   scalaBackendsTitle: Scala runs on the following platforms...
   scalaBackendsMore: with more backends on the way.
@@ -12,7 +5,7 @@ texts:
   onlineCoursesFree: Free (optional paid certificate)
   onlineCoursesPaid: Paid (with certificate)
   courseraLaunchPeriod: New sessions starting every 2 weeks!
-  scalaMaintainersTitle: The Scala language is maintained by
-  scalaSupportersTitle: The Scala Center is supported by
+  scenicMaintainersTitle: The Scenic language is maintained by
+  scenicSupportersTitle: Scenic is supported by
   frontpageMarker: "Scala began life in 2003, created by Martin Odersky and his research group at EPFL, next to Lake Geneva and the Alps, in Lausanne, Switzerland. Scala has since grown into a mature open source programming language, used by hundreds of thousands of developers, and is developed and maintained by scores of people all over the world."
   booksBy: "by"

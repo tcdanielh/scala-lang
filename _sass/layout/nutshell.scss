@@ -6,7 +6,7 @@
     background: $gray-nutshell;
 
 
-    .scala-item_icon {
+    .scenic-item_icon {
         width: 100px;
         height: 100px;
         padding: 10px;
@@ -29,7 +29,7 @@
         }
     }
 
-    .scala-items-grid {
+    .scenic-items-grid {
 
         .button {
             font-size: 0.6rem;
@@ -93,7 +93,7 @@
                 align-items: center;
                 justify-items: center;
 
-                .scala-item {
+                .scenic-item {
                     width: 600px;
                     @include bp(large) {
                         width: 100%;
@@ -110,7 +110,7 @@
             @include bp(large) {
                 grid-template-columns: 1fr;
             }
-            .scala-item {
+            .scenic-item {
                 @include display(flex);
                 @include flex-direction(column);
                 @include justify-content(space-between);
@@ -167,7 +167,7 @@
                     background: $gray-dark;
                     padding: 25px 0 5px 0;
 
-                    .scala-row {
+                    .scenic-row {
                         @include display(flex);
                         @include flex-direction(row);
                         // @include justify-content(space-between);
@@ -178,11 +178,11 @@
                             @include flex-direction(column);
                         }
 
-                        &.scala-row_align-start {
+                        &.scenic-row_align-start {
                             @include align-items(start);
                         }
 
-                        &:has(+ .scala-row) {
+                        &:has(+ .scenic-row) {
                             margin-bottom: 20px;
                         }
                     }
@@ -211,7 +211,7 @@
                         border: 1px solid $code-bg-color-dark-highlight;
                     }
 
-                    .scala-code {
+                    .scenic-code {
 
                         margin: 0 5px;
                         width: 50%;
@@ -229,7 +229,7 @@
                         }
                     }
 
-                    .scala-text {
+                    .scenic-text {
                         code {
                             background: $gray-darker;
                             padding: 2px 8px;
@@ -255,7 +255,7 @@
                             }
                         }
 
-                        &.scala-text-large {
+                        &.scenic-text-large {
                             width: 100%;
                             margin: 0;
                             // @include span-columns(12);
@@ -267,7 +267,7 @@
         }
     }
 
-    .scala-item-expanded {
+    .scenic-item-expanded {
         display: none;
         height: 400px;
         background: $gray-dark;

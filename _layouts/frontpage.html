@@ -8,13 +8,6 @@
 <!-- Header -->
   <header id="site-header" class="header-home">
     <div class="header-background">
-      <div class="new-on-the-blog">
-        <p>New on the blog:
-          {% assign newPost = site.posts.first %}
-          <a href="{{newPost.url}}">{{newPost.title}}</a>
-        </p>
-        <span class="hide"><i class="fa fa-close"></i></span>
-      </div>
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
@@ -23,7 +16,7 @@
           </div>
           <a href="/" class="navigation-bdand show-lg">
             <!-- show standard nav logo below the large breakpoint -->
-            <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt=""/>
+            <img src="/resources/img/frontpage/shape.png" alt=""/>
           </a>
           <div class="navigation-panel-button">
             <i class="fa fa-bars"></i>
@@ -45,27 +38,24 @@
             <h2>{{page.headerSubtitle}}</h2>
             <div class="button-row__container">
               <div class="button-row">
-                {% for release in site.data.scala-releases %}
+                {% for release in site.data.scenic-releases %}
                 {% if release.category == "current_version" %}
-                <a href="/download/{{ release.version }}.html" class="button">
-                  Scala {{ release.version }}
+                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases/tag/v{{ release.version }}" class="button">
+                  Scenic {{ release.version }}
                 </a>
                 {% endif %}
                 {% endfor %}
-                <a href="/download/all.html" class="button">
+                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases" class="button">
                   All Releases
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          {% include code-carousel.html id='scala-main-carousel' collection=site.scala_carousel_items compact=true %}
-        </div>
       </div>
     </div>
-    <!-- Scala Main Resources -->
-    <div class="scala-main-resources">
+    <!-- Scenic Main Resources -->
+    <div class="scenic-main-resources">
       <div class="wrap">
         <div class="resources">
           <div class="get-started">
@@ -80,7 +70,7 @@
               </ul>
             </div>
           </div>
-          <div class="learn-scala">
+          <div class="learn-scenic">
             <a href="{{page.apiDocs.mainUrl}}" class="button">{{page.apiDocs.mainTitle | upcase}}</a>
             <div class="sublinks">
               <ul>
@@ -92,10 +82,10 @@
               </ul>
             </div>
           </div>
-          <div class="scala-brand-circle">
+          <div class="scenic-brand-circle">
             <div class="circle-solid">
-              <img src="/resources/img/frontpage/scala-spiral.png" alt="">
-              <div class="scala-version">
+              <img src="/resources/img/frontpage/shape.png" alt="">
+              <div class="scenic-version">
               </div>
             </div>
           </div>
@@ -107,19 +97,16 @@
 
 <main id="site-main">
 
-<!-- Why Scala -->
+<!-- Why Scenic -->
 <section class="nutshell">
   <div class="wrap">
-    <!-- <div class="heading-line">
-      <h2><span>{{page.whyScalaTitle}}</span></h2>
-    </div> -->
-    <div class="scala-items-grid">
+    <div class="scenic-items-grid">
       <div class="items-menu">
-        {% for scalaItem in site.why_scala_items %}
-        <div class="scala-item scala-item_why-scala ">
-          <div class="scala-item_content">
-            <h3>{{scalaItem.shortTitle}}</h3>
-            <p>{{scalaItem.shortDescription}}</p>
+        {% for scenicItem in site.why_scenic_items %}
+        <div class="scenic-item scenic-item_why-scenic ">
+          <div class="scenic-item_content">
+            <h3>{{scenicItem.shortTitle}}</h3>
+            <p>{{scenicItem.shortDescription}}</p>
           </div>
         </div>
         {% endfor %}
@@ -139,130 +126,7 @@
         <p>{{page.useCaseIntroduction}}</p>
       </div>
     </div>
-    <div class="scala-items-grid g-cols-4">
-      <div class="items-menu">
-        {% for scalaItem in site.scala_use_case_items %}
-        <div class="scala-item scala-item_use-cases ">
-          <div class="scala-item_content">
-            <img class="scala-item_icon" src="/resources/img/icons/{{scalaItem.icon}}" alt="{{scalaItem.shortTitle}}"/>
-            <h3>{{scalaItem.shortTitle}}</h3>
-            <p>{{scalaItem.shortDescription}}</p>
-          </div>
-          <a href="#{{scalaItem.anchorTarget}}" class="button button_call-to-action">{{scalaItem.expandText | default: 'See More...' }}</a>
-        </div>
-        <div id="{{scalaItem.anchorTarget}}" class="items-content">
-          <div class="wrap">
-            <a id="{{scalaItem.anchorTarget}}-close" class="items-content_close" href="#{{scalaItem.anchorTarget}}-close"><i class="fa fa-close"></i></a>
-          </div>
-          <div class="items-code">
-            <div class="wrap">
-              {{scalaItem.content}}
-              <a href="#{{scalaItem.anchorTarget}}" class="button button_return-anchor"><i class="fa-solid fa-angle-up"></i> back to top</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Scala Ecosystem -->
-<section class="scala-ecosystem">
-  <div class="wrap">
-    <!-- <div class="heading-line">
-      <h2><span>{{page.ecosystemTitle}}</span></h2>
-    </div> -->
-    <div class="section-text ta-c">
-      <p>{{site.data.awesome-scala.summaryText}}</p>
-    </div>
-    <div class="browser">
-      <div class="header-browser">
-        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/scaladex-logo.png"
-            alt=""></a>
-        <div class="main-browser">
-          <div class="input-control">
-            <span><i class="fa fa-search"></i></span>
-            <input type="text" placeholder="e.g. database" id="scaladex-search">
-          </div>
-        </div>
-        <a class="button awesome" href="{{site.data.common.scaladexUrl}}/awesome">Awesome Scala</a>
-      </div>
-    </div>
-    <!-- <div class="awesome-table">
-      <div class="wrap">
-        <div class="awesome-items">
-          {% for awesomeLink in site.data.awesome-scala.links %}
-          <a href="{{awesomeLink.url}}" class="button button_call-to-action content-card">
-            <h3><i class="fa fa-search"></i>{{awesomeLink.title}}</h3>
-          </a>
-          {% endfor %}
-        </div> -->
-        <!-- <div class="awesome-summary">
-          <p class="awesome-summary-text">{{site.data.awesome-scala.summaryText}}</p>
-        </div> -->
-      <!-- </div>
-    </div> -->
-  </div>
-</section>
-
-<!-- Scala backends -->
-<section class="runs">
-  <div class="wrap">
-    <h2>{{site.data.common.texts.scalaBackendsTitle}}</h2>
-    <ul>
-      {% for backend in page.scalaBackends %}
-      <li class="masterTooltip" title="{{backend.description}}">
-        <span>
-          <a href="{{backend.link}}"><img src="{{backend.icon}}" alt="{{backend.description}}"></a>
-        </span>
-        {% if backend.beta == 1 %}<span class="beta">beta</span>{% endif %}
-      </li>
-      {% unless forloop.last %}<li></li>{% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<!-- Users of Scala -->
-<section class="nutshell">
-  <div class="wrap">
-    <div class="heading-line">
-      <!-- TODO: add this title when other sub-sections are included -->
-      <!-- <h2><span>{{page.scalaUsersTitle}}</span></h2> -->
-      <h2><span>{{site.scala_items[0].shortTitle}}</span></h2>
-    </div>
-    <!-- TODO: add this summary when other sub-sections are included -->
-    <!-- <div class="section-text ta-c">
-      <p>{{page.scalaUsersIntroduction}}</p>
-    </div> -->
-    <!-- TODO: change class to `g-cols-2` when other sub-sections are included -->
-    <div class="scala-items-grid g-cols-1">
-      <div class="items-menu">
-        {% for scalaItem in site.scala_items %}
-        <div class="scala-item scala-item_scala-users ">
-          <div class="scala-item_content">
-            <img class="scala-item_icon" src="/resources/img/icons/{{scalaItem.icon}}" alt="{{scalaItem.shortTitle}}" />
-            <!-- TODO: add this title when other sub-sections are included -->
-            <!-- <h3>{{scalaItem.shortTitle}}</h3> -->
-            <p>{{scalaItem.shortDescription}}</p>
-          </div>
-          <!-- TODO restore if we have actual pages prepared -->
-          <a href="#{{scalaItem.anchorTarget}}" class="button button_call-to-action">{{scalaItem.expandText | default: 'See
-            More...'
-            }}</a>
-        </div>
-        <div id="{{scalaItem.anchorTarget}}" class="items-content">
-          <div class="wrap">
-            <a id="{{scalaItem.anchorTarget}}-close" class="items-content_close" href="#{{scalaItem.anchorTarget}}-close"><i class="fa fa-close"></i></a>
-          </div>
-          <div class="items-code">
-            <div class="wrap">{{scalaItem.content}}</div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+    <div class="scenic-items-grid g-cols-3">
     </div>
   </div>
 </section>
@@ -271,16 +135,18 @@
 <section class="maintenance">
   <div class="wrap">
     <div class="heading-line">
-      <h2><span>{{site.data.common.texts.scalaMaintainersTitle}}</span></h2>
+      <h2><span>{{site.data.common.texts.scenicMaintainersTitle}}</span></h2>
     </div>
     <ul class="maintained">
-      {% for maintainer in site.data.scala-supporters.maintainers %}
+      {% for maintainer in site.data.scenic-supporters.maintainers %}
         <li><a href="{{maintainer.url}}"><img src="{{maintainer.logo}}" alt="{{maintainer.name}}"></a></li>
       {% endfor %}
     </ul>
-    <h3>{{site.data.common.texts.scalaSupportersTitle}}</h3>
+    <div class="heading-line">
+      <h2><span>{{site.data.common.texts.scenicSupportersTitle}}</span></h2>
+    </div>
     <div class="supported">
-      {% for supporter in site.data.scala-supporters.supporters %}
+      {% for supporter in site.data.scenic-supporters.supporters %}
         <a href="{{supporter.url}}"><img {% if supporter.wider-logo %} class="logo-with-wider-aspect-ratio" {% endif %} src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
       {% endfor %}
     </div>

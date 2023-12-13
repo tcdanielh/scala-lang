@@ -4,78 +4,22 @@ layout: frontpage
 darkmodeCode: true
 
 # Header texts
-headerTitle: "Scala"
-headerSubtitle: "A programming language that scales with you: from small scripts to large multiplatform applications."
-headerButtonTitle: "Learn More"
-headerButtonUrl: "/what-is-scala/"
+headerTitle: "Scenic"
+headerSubtitle: "A probabilistic programming language for writing formal models of the environments of cyber-physical systems."
 
 # Links of the Download / API Docs sections
 gettingStarted:
   mainTitle: "Get Started"
-  mainUrl: "https://docs.scala-lang.org/getting-started.html"
-  subtitle: "Overview"
-  subtitleLink: "https://docs.scala-lang.org/tour/tour-of-scala.html"
-  links:
-    - title: "Guide"
-      url: "https://docs.scala-lang.org/scala3/book/introduction.html"
-    - title: "Courses"
-      url: "https://docs.scala-lang.org/online-courses.html"
+  mainUrl: "https://scenic-lang.readthedocs.io/en/latest/quickstart.html"
 apiDocs:
   mainTitle: "Documentation"
-  mainUrl: "https://docs.scala-lang.org"
-  subtitle: "API Docs"
-  subtitleLink: "https://docs.scala-lang.org/api/all.html"
-  links:
-    - title: "Migrate to Scala 3"
-      url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
+  mainUrl: "https://scenic-lang.readthedocs.io/en/latest/index.html"
 
+# Why Scenic
+whyScenicTitle: "Why Scenic?"
 
-# Scala backends
-scalaBackends:
-  - icon: /resources/img/frontpage/java-logo.png
-    description: the Java Virtual Machine
-    link: https://scala-lang.org/
-  - icon: /resources/img/frontpage/js-logo.png
-    description: with JavaScript in your browser
-    link: https://www.scala-js.org/
-  - icon: /resources/img/frontpage/llvm-logo.png
-    description: natively with LLVM
-    link: https://scala-native.org/
+# Scenic use cases
+useCaseTitle: "Wide Range of Applications"
+useCaseIntroduction: "Proven use cases across multiple domains. We currently support several domains by default in Scenic. If you have a new domain interface, let us know!"
 
-# Scala IDEs
-scalaIDEs:
-  - name: IntelliJ IDEA
-    icon: /resources/img/frontpage/intelliJ.png
-    metals: false
-    url: "https://www.jetbrains.com/idea/"
-  - name: VS Code
-    icon: /resources/img/frontpage/vs_code.png
-    metals: true
-    url: "https://scalameta.org/metals/docs/editors/vscode.html"
-  - name: GNU Emacs
-    icon: /resources/img/frontpage/emacs-logo.svg
-    metals: true
-    url: "https://scalameta.org/metals/docs/editors/emacs.html"
-  - name: Vim
-    icon: /resources/img/frontpage/vim-logo.svg
-    metals: true
-    url: "https://scalameta.org/metals/docs/editors/vim.html"
-  - name: Sublime Text
-    icon: /resources/img/frontpage/sublime.png
-    metals: true
-    url: "https://scalameta.org/metals/docs/editors/sublime.html"
-
-# Why Scala
-whyScalaTitle: "Why Scala?"
-
-# Scala use cases
-useCaseTitle: "Proven Use Cases"
-useCaseIntroduction: "People around the world trust Scala to build useful software. Popular domains include"
-
-# Scala ecosystem
-ecosystemTitle: "Scala's libraries unlock your potential"
-
-# Scala users
-scalaUsersTitle: "Users of Scala"
-scalaUsersIntroduction: "Scala is used by thousands of developers, students, hobbyists and teachers around the world. See why you should try it."
 ---
